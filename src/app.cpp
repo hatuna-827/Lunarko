@@ -4,6 +4,7 @@
 #include <QMenuBar>
 #include <QFileDialog>
 #include <QFile>
+#include <QIcon>
 #include <QTextStream>
 
 int main(int argc, char *argv[])
@@ -11,6 +12,7 @@ int main(int argc, char *argv[])
 	// window
 
 	QApplication app(argc, argv);
+	app.setWindowIcon(QIcon(":/icons/favicon.png"));
 	QMainWindow window;
 	window.setWindowTitle("Lunarko");
 
@@ -28,7 +30,7 @@ int main(int argc, char *argv[])
 
 	// menubar
 
-	QFont menuFont;
+	QFont menuFont("MS Gothic");
 	menuFont.setPointSize(14);
 	window.menuBar()->setFont(menuFont);
 
