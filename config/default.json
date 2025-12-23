@@ -1,0 +1,20 @@
+{
+  "window.height": 1000,
+  "window.width": 1200,
+  "window.colorTheme": "light",
+  "menubar.foreground": "#000",
+  "menubar.background": "#fff",
+  "menubar.hoverForeground": "$foreground",
+  "menubar.hoverBackground": "#eee",
+  "menubar.border": "#ddd",
+  "menubar.fontFamily": "MS Gothic",
+  "menubar.fontSize": 14,
+  "editor.foreground": "#000",
+  "editor.background": "#fff",
+  "editor.selectionForeground": "$foreground",
+  "editor.selectionBackground": "#def",
+  "editor.lineHighlightBackground": "#eff",
+  "editor.fontFamily": "MS Gothic",
+  "editor.fontSize": 14,
+  "editor.tabWidth": 4
+}
