@@ -1,6 +1,8 @@
 #pragma once
 
 #include <QWidget>
+#include <QFont>
+#include <QPalette>
 
 class QPlainTextEdit;
 
@@ -20,5 +22,7 @@ public slots:
 
 private:
     QPlainTextEdit *editor;
+    QFont font;
+    QPalette color;
     int EditorDefaultFontSite;
 };

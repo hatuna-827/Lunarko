@@ -6,7 +6,7 @@
 QJsonObject Config::s_defaults;
 QJsonObject Config::s_user;
 
-static QJsonObject loadJson(const QString &path)
+QJsonObject Config::loadJson(const QString &path)
 {
     QFile f(path);
     if (!f.open(QIODevice::ReadOnly))

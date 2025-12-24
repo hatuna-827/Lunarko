@@ -1,5 +1,6 @@
 #pragma once
 
+#include <QFont>
 #include <QMenuBar>
 #include <QMenu>
 #include <QAction>
@@ -7,7 +8,7 @@
 class View
 {
 public:
-  explicit View(QMenuBar *menubar);
+  explicit View(QMenuBar *menubar, QFont *font);
 
   QAction *zoomInAction() const;
   QAction *zoomOutAction() const;

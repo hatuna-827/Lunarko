@@ -1,11 +1,12 @@
 #include "View.hpp"
 
-View::View(QMenuBar *menubar)
+View::View(QMenuBar *menubar, QFont *font)
     : viewMenu(menubar->addMenu("View")),
       zoomIn(viewMenu->addAction("Zoom In")),
       zoomOut(viewMenu->addAction("Zoom Out")),
       zoomReset(viewMenu->addAction("Reset Zoom"))
 {
+  viewMenu->setFont(*font);
   QList<QKeySequence> ZoomInShortcutKey;
   ZoomInShortcutKey << QKeySequence::fromString("Ctrl++")
                     << QKeySequence::fromString("Ctrl+;");

@@ -20,7 +20,7 @@ public:
 
 private:
   QMenuBar *menubar;
-  QFont font;
+  QFont *font;
   File *file;
   View *view;
 };

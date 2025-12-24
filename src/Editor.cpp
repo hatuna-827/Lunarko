@@ -1,9 +1,8 @@
 #include "Editor.hpp"
 #include "Config.hpp"
 
-#include <QPlainTextEdit>
 #include <QVBoxLayout>
-#include <QFont>
+#include <QPlainTextEdit>
 
 Editor::Editor(QWidget *parent)
     : QWidget(parent),
@@ -19,8 +18,15 @@ Editor::Editor(QWidget *parent)
     font.setPointSize(EditorDefaultFontSite);
     editor->setFont(font);
 
+    QPalette color = editor->palette();
+    color.setColor(QPalette::Base, QColor(Config::stringValue("editor.background")));
+    color.setColor(QPalette::Text, QColor(Config::stringValue("editor.foreground")));
+    color.setColor(QPalette::Highlight, QColor((Config::stringValue("editor.selectionBackground"))));
+    color.setColor(QPalette::HighlightedText, QColor((Config::stringValue("editor.selectionForeground"))));
+    editor->setPalette(color);
+
     editor->setTabStopDistance(
-        QFontMetrics(font).horizontalAdvance(' ') * 4);
+        QFontMetrics(font).horizontalAdvance(' ') * Config::intValue("editor.tabWidth"));
 }
 
 void Editor::setFontPointSize(int pt)

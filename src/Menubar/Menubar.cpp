@@ -7,12 +7,12 @@
 
 Menubar::Menubar(QMainWindow *window)
 {
-  QFont font(Config::stringValue("menubar.fontFamily"));
-  font.setPointSize(Config::intValue("menubar.fontSize"));
+  font = new QFont(Config::stringValue("menubar.fontFamily"));
+  font->setPointSize(Config::intValue("menubar.fontSize"));
   QMenuBar *menubar = window->menuBar();
-  menubar->setFont(font);
-  file = new File(menubar);
-  view = new View(menubar);
+  menubar->setFont(*font);
+  file = new File(menubar, font);
+  view = new View(menubar, font);
 }
 
 QAction *Menubar::openAction() const { return file->openAction(); }

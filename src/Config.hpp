@@ -15,6 +15,8 @@ public:
     static void setValue(const QString &key, const QJsonValue &value);
 
 private:
+    static QJsonObject loadJson(const QString &path);
+
     static QJsonObject s_defaults;
     static QJsonObject s_user;
 };
