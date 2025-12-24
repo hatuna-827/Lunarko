@@ -1,9 +1,10 @@
 #include "File.hpp"
+#include "../Translate.hpp"
 
 File::File(QMenuBar *menubar, QFont *font)
-    : fileMenu(menubar->addMenu("File")),
-      open(fileMenu->addAction("Open")),
-      save(fileMenu->addAction("Save"))
+    : fileMenu(menubar->addMenu(Translate::get("File"))),
+      open(fileMenu->addAction(Translate::get("Open"))),
+      save(fileMenu->addAction(Translate::get("Save")))
 {
   fileMenu->setFont(*font);
   open->setShortcut(QKeySequence::fromString("Ctrl+s"));

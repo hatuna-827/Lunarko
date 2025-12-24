@@ -31,8 +31,3 @@ Window::Window(QWidget *parent)
 
     resize(Config::intValue("window.width"), Config::intValue("window.height"));
 }
-
-Window::~Window()
-{
-    Config::save();
-}
